@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brutal-yellow: #FFDF00;
+  --color-brutal-pink: #FF2E88;
+  --color-brutal-lime: #9BFF00;
+  --color-brutal-white: #FFFFFF;
+  --color-brutal-black: #000000;
+  --color-brutal-red: #FF3333;
+
+  --font-inter: "Inter", sans-serif;
+  --font-roboto-mono: "Roboto Mono", monospace;
+}
+
+@layer base {
+  * {
+    border-radius: 0 !important;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    background-color: #F5F5F0;
+    color: var(--color-brutal-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .brutal-card {
+    border: 3px solid var(--color-brutal-black);
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    background-color: var(--color-brutal-white);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .brutal-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  }
+
+  .brutal-btn {
+    border: 3px solid var(--color-brutal-black);
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+  }
+
+  .brutal-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  }
+
+  .brutal-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+  }
+
+  .brutal-badge {
+    border: 2px solid var(--color-brutal-black);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .brutal-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .brutal-scrollbar::-webkit-scrollbar-track {
+    background: #F5F5F0;
+    border-left: 2px solid black;
+  }
+
+  .brutal-scrollbar::-webkit-scrollbar-thumb {
+    background: black;
+  }
+}
+
+/* React Flow overrides for Neo-Brutalism */
+.react-flow__node {
+  border-radius: 0 !important;
+}
+
+.react-flow__edge-path {
+  /* Keep defaults minimal so CustomEdge controls stroke color/width */
+  stroke-width: 2px;
+}
+
+.react-flow__controls {
+  border: 3px solid black !important;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1) !important;
+  border-radius: 0 !important;
+}
+
+.react-flow__controls-button {
+  border-radius: 0 !important;
+  border-bottom: 2px solid black !important;
+}
+
+.react-flow__minimap {
+  border: 3px solid black !important;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1) !important;
+  border-radius: 0 !important;
+}
